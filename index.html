@@ -291,6 +291,12 @@
 				</form>
 			</div>
 		</section>
+		<script type="text/javascript">
+$('#myForm').on('submit', function(e) {
+  $('#myForm *').fadeOut(2000);
+  $('#myForm').prepend('Your submission has been processed...');
+  });
+</script>
 		<!-- End Conatct- Area -->
 		<!-- Strat Footer Area -->
 		<footer class="section-gap">
