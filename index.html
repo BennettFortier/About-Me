@@ -295,6 +295,15 @@ var submitted = false;
 				</form>
 
 			</div>
+			<script>
+			if(submitted){
+				var form = document.getElementById("gform");
+				form.trigger('reset'); // reset form
+				submit.attr("style", "display: none !important");
+				submitted = false;
+			}
+
+			</script>
 		</section>
 
 		<!-- End Conatct- Area -->
