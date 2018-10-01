@@ -272,9 +272,19 @@
 					</div>
 				</div>
 <script>
+
+function clear(){
+	alert("cleared")
+	var form = document.getElementById("gform");
+	form.trigger('reset'); // reset form
+	submit.attr("style", "display: none !important");
+	submitted = false;
+}
+
+
 var submitted = false;
 </script>
-			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSciyX-tgfWmYPXuO4FXlVw6YSy7zObcVSWNCZjpnelSiM7OBw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSciyX-tgfWmYPXuO4FXlVw6YSy7zObcVSWNCZjpnelSiM7OBw/formResponse?" target="hidden_iframe" onsubmit="submitted=true; clear()">
 				<div class="row justify-content-center">
 					<div class="col-lg-5">
 						<input name = "entry.1536472754"id =  "entry.1536472754" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-20" required="" type="text">
@@ -286,7 +296,7 @@ var submitted = false;
 						<textarea class="common-textarea mt-20" id ="entry.981993852" name ="entry.981993852" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
 				</div>
 				<div class="col-lg-10 d-flex justify-content-end">
-					<button onclick = "clear"class="primary-btn white-bg d-inline-flex align-items-center mt-20"><span class="mr-10">Send Message</span><span class="lnr lnr-arrow-right"></span></button> <br>
+					<button onclick = "clear()"class="primary-btn white-bg d-inline-flex align-items-center mt-20"><span class="mr-10">Send Message</span><span class="lnr lnr-arrow-right"></span></button> <br>
 				</div>
 				<div class="alert-msg"></div>
 				</div>
@@ -295,16 +305,7 @@ var submitted = false;
 				</form>
 
 			</div>
-			<script>
-			function clear(){
-				alert("cleared")
-				var form = document.getElementById("gform");
-				form.trigger('reset'); // reset form
-				submit.attr("style", "display: none !important");
-				submitted = false;
-			}
 
-			</script>
 		</section>
 
 		<!-- End Conatct- Area -->
